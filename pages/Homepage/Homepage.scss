@@ -1,0 +1,201 @@
+// Hero Section
+.homepage-banner{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .content{
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+        .name{
+            font-size: 2.3rem;
+            margin-block-end: 15px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .role{
+            font-size: 21px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            margin-block-end: 22px;
+        }
+        .links{
+            margin-block-end: 22px;
+            li{
+                a{
+                    font-size: 0.7rem;
+                    color: #fff;
+                    margin-inline-end: 1rem;
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    &:hover{
+                        text-decoration: underline;
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+        .socials{
+            li{
+                margin-inline-end: 8px;
+                a{
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
+// About Section
+.about-me{
+    .image{
+        height: 453px;
+        width: 453px;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .content{
+        flex-direction: column;
+        justify-content: center;
+        max-width: 670px;
+        word-wrap: break-word;
+        h1{
+            font-size: 2.1rem;
+            margin-block-end: 15px;
+        }
+        p{
+            font-size: 0.91rem;
+        }
+    }
+}
+// My Skills
+.my-skills{
+    background: #1b232e;
+    color: #fff;
+    h1{
+        font-size: 2.1rem;
+        margin-block-end: 3rem;
+    }
+    .badges{
+        flex-wrap: wrap;
+        justify-content: center;
+        li{
+            margin: 8px;
+            margin-block-end: 1rem;
+            transition: ease-out 0.3s;
+            &:hover{
+                transform: translateY(-5px);
+                transition: ease-in 0.3s;
+            }
+            p{
+                font-size: 0.8rem;
+                pointer-events: none;
+            }
+        }
+    }
+}
+// Projects Section
+.projects{
+    .section-title{
+        font-size: 2.1rem;
+        margin-block-end: 4rem;
+    }
+    .container{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        justify-content: center;
+    }
+}
+// Last Contact Section
+.last-contact{
+    background: #F8F8F8;
+    .content{
+        // flex-direction: column;
+        justify-content: center;
+        //width: 670px;
+        word-wrap: break-word;
+        .title{
+            font-size: 1.9rem;
+        }
+        .description{
+            font-size: 0.9rem;
+            margin-block-end: 1rem;
+        }
+    }
+    .form{
+
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    .about-me{
+        .content{
+            // width: 570px;
+            h1{
+                font-size: 2.1rem;
+                margin-block-end: 15px;
+            }
+            p{
+                // font-size: 21px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .about-me{
+        .wrapper-md{
+            flex-direction: column;
+            align-items: center;
+            .content{
+                margin-block-start: 1.5rem;
+                h1{
+                    font-size: 2.1rem;
+                    margin-block-end: 15px;
+                }
+                p{
+                    // font-size: 18px;
+                }
+            }
+        }
+    }
+    .projects{
+        .container{
+            grid-template-columns: repeat(2,minmax(0,1fr));
+        }
+    }
+}
+@media only screen and (max-width: 922px) {
+    // .nav{
+    //     position: absolute;
+    //     top: 0;
+    //     width: 100vw;
+    // }
+}
+@media only screen and (max-width: 768px) {
+    .projects{
+        .container{
+            grid-template-columns: repeat(1,minmax(0,1fr));
+            justify-content: center;
+        }
+    }
+    .about-me{
+        .image{
+            height: 320px;
+            width: 320px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .content{
+            // width: 320px;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .projects{
+        .container{
+            grid-template-columns: repeat(1,minmax(0,1fr));
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+header{
+    align-items: center;
+    min-height: 65px;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.1);
+    .wrapper-md{
+        flex-direction: row!important;
+    }
+    .logo{
+        height: 45px;
+        width: 47px;
+        a{
+            .img{
+                
+                margin: auto;
+            }
+        }
+    }
+    .nav{
+        .mobile-header{
+            display: none;
+        }
+        li{
+            a{
+                font-size: 0.8rem;
+                margin-inline-start: 2rem;
+                color: var(--primary-dark);
+                transition: ease-in-out .3s;
+                &:hover{
+                    color: var(--primary-blue);
+                }
+            }
+        }
+    }
+    .mobile-menu-bars{
+        display: none;    
+        width: 1.65rem;
+        height: 1.65rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    
+}
+@media only screen and (max-width: 922px) {
+    // .nav{
+    //     position: absolute;
+    //     top: 0;
+    //     width: 100vw;
+    // }
+}
+@media only screen and (max-width: 768px) {
+    .nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--primary-dark);
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        z-index: -1;
+        transition: ease-in-out .3s;
+        &.active{
+            z-index: 0;
+            opacity: 1;
+        }
+        .mobile-header{
+            display: flex!important;
+            min-height: 65px;
+            width: 100%;
+            align-items: center;
+            .mobile-header-icon{
+                float: right;
+            }
+        }
+        li{
+            margin-block-start: 1rem;
+            a{
+                color: #fff!important;
+                font-size: 1.4rem!important;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    .mobile-menu-bars{
+        display: block!important;
+    }
+}
+@media only screen and (max-width: 600px) {
+
+}

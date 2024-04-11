@@ -1,0 +1,41 @@
+{
+  "name": "expo-web-portfolio",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "homepage": "https://bigegu24.github.io/expo-web-portfolio/",
+  "scripts": {
+    "start": "npx expo start",
+    "android": "npx expo start --android",
+    "ios": "npx expo start --ios",
+    "web": "npx expo start --web",
+    "web-build": "rimraf dist && expo export --platform web",
+    "web-deploy": "yarn web-build && gh-pages -t -d dist"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~3.1.3",
+    "@mdi/js": "^7.4.47",
+    "@mdi/react": "^1.6.1",
+    "dotenv": "^16.4.5",
+    "expo": "50.0.15",
+    "expo-status-bar": "~1.11.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.73.6",
+    "react-native-dotenv": "^3.4.11",
+    "react-native-web": "~0.19.6",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^5.0.1",
+    "react-scroll": "^1.9.0",
+    "react-spring": "8.0.1",
+    "react-transition-group": "^4.4.5",
+    "react-visibility-sensor": "^5.1.1",
+    "rimraf": "^5.0.5",
+    "sass": "^1.74.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "gh-pages": "^6.1.1"
+  },
+  "private": true
+}
