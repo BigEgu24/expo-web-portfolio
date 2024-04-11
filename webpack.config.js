@@ -1,6 +1,7 @@
 const createExpoWebpackConfig = require("@expo/webpack-config");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const DotenvWebpack = require('dotenv-webpack');
+const path = require("path");
 
 module.exports = async function (env, argv) {
   // Load environment variables from .env file based on the mode (development or production)
@@ -27,8 +28,8 @@ module.exports = async function (env, argv) {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "assets/images"),
-          to: path.resolve(__dirname, "web-build/images")
+          from: path.resolve(__dirname, "images"),
+          to: path.resolve(__dirname, "dist/images")
         },
       ],
     })
