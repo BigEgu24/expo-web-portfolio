@@ -159,7 +159,7 @@ export default function Homepage() {
                     <div
                       className="image"
                       style={{
-                        backgroundImage: `url("/images/gh-picture.png")`,
+                        backgroundImage: `url("${PUBLIC_URL}/images/gh-picture.png")`,
                         opacity,
                       }}
                     ></div>

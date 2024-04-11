@@ -27,8 +27,8 @@ module.exports = async function (env, argv) {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: "assets/images", // Adjust this source path to where your images are located
-          to: "images" // The destination path in your build folder
+          from: path.resolve(__dirname, "assets/images"),
+          to: path.resolve(__dirname, "web-build/images")
         },
       ],
     })
