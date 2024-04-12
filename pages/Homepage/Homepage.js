@@ -28,7 +28,8 @@ import { Project1 } from "../../components/Project/Data";
 import Sensor from "../../components/Sensor/Sensor";
 import Button from "../../components/Button/Button";
 import { SubscribeIcon } from "../../components/Icons";
-const Link = require("react-router-dom").Link;
+import ghImage from '../../images/gh-picture.png';
+import {Link} from "react-router-dom";
 
 export default function Homepage() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -159,7 +160,7 @@ export default function Homepage() {
                     <div
                       className="image"
                       style={{
-                        backgroundImage: `url("${PUBLIC_URL}/images/gh-picture.png")`,
+                        backgroundImage: `url("${ghImage}")`,
                         opacity,
                       }}
                     ></div>
