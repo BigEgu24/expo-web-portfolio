@@ -37,7 +37,7 @@ export default function Project({
     }
     
     return (
-        <div className="project flex pointer relative" style={{ backgroundImage: `url("${PUBLIC_URL==="/" ? '' : ''}/images/${img}")`  }} onClick={() => openModal()}>
+        <div className="project flex pointer relative" style={{ backgroundImage: `url("${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/images/${img}")`  }} onClick={() => openModal()}>
             {/* Site as background with search icon in center */}
             <Icon 
             path={mdiMagnify}

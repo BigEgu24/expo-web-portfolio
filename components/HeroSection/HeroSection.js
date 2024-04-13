@@ -1,5 +1,6 @@
 import React from 'react';
 import "./HeroSection.scss";
+import { PUBLIC_URL } from "@env";
 
 export default function HeroSection(props) {
     return (
@@ -8,7 +9,7 @@ export default function HeroSection(props) {
                 props.homepage ? (
                     <div 
                     className={props.flex ? `hero-section homepage-banner flex ${props.className} ${props.alignItemsCenter ? "items-center" : null}` : "hero-section"}
-                    style={{ ...props.style, backgroundImage: `url("/images/code-computer.png")` }}
+                    style={{ ...props.style, backgroundImage: `url("${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/images/code-computer.png")` }}
                     >
                         {props.children}
                     </div>

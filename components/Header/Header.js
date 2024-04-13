@@ -19,8 +19,8 @@ export default function Header() {
                 itemsCenter
             >
                 <div className="logo">
-                    <Link to={"/"}>
-                        <img src={`/images/logo.png`} alt="" className="img" height="45" width="47"/>
+                    <Link to={PUBLIC_URL}>
+                        <img src={`${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/images/logo.png`} alt="" className="img" height="45" width="47"/>
                     </Link>
                 </div>
                 <ul className={nav ? "nav flex relative active" : "nav flex relative"}>
@@ -39,16 +39,16 @@ export default function Header() {
                         </Wrapper>
                     </div>
                     <li>
-                        <Link to={"/#about-me"}>About</Link>
+                        <Link to={`${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/#about-me`}>About</Link>
                     </li>
                     <li>
-                        <Link target="__blank" to={`/resume.pdf`}>Resume</Link>
+                        <Link target="__blank" to={`${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/resume.pdf`}>Resume</Link>
                     </li>
                     <li>
-                        <Link to={"/#projects"}>Projects</Link>
+                        <Link to={`${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/#projects`}>Projects</Link>
                     </li>
                     <li>
-                        <Link to={"/contact"}>Contact</Link>
+                        <Link to={`${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/contact`}>Contact</Link>
                     </li>
                 </ul>
                 <div className="mobile-menu-bars pointer" onClick={() => toggleNav(!nav)}>

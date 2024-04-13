@@ -13,6 +13,7 @@ import {
     mdiNodejs,
     mdiDatabase
 } from '@mdi/js';
+import { PUBLIC_URL } from "@env";
 const Link = require("react-router-dom").Link;
 
 export default function Footer() {
@@ -28,13 +29,13 @@ export default function Footer() {
                 </p>
                 <ul className="links flex items-center">
                     <li>
-                        <Link to="/#about-me">About</Link>
+                        <Link to={`${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/#about-me`}>About</Link>
                     </li>
                     <li>
-                        <Link target="__blank" to="/resume.pdf">Resume</Link>
+                        <Link target="__blank" to={`${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/resume.pdf`}>Resume</Link>
                     </li>
                     <li>
-                        <Link to="/#projects">Projects</Link>
+                        <Link to={`${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/#projects`}>Projects</Link>
                     </li>
                 </ul>
                 <ul className="socials flex items-center">

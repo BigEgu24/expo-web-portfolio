@@ -8,7 +8,6 @@ import { Spring } from "react-spring/renderprops";
 import { Link as ScrollLink } from "react-scroll";
 import { PUBLIC_URL } from "@env";
 
-
 import Icon from "@mdi/react";
 import {
   mdiLinkedin,
@@ -28,7 +27,6 @@ import { Project1 } from "../../components/Project/Data";
 import Sensor from "../../components/Sensor/Sensor";
 import Button from "../../components/Button/Button";
 import { SubscribeIcon } from "../../components/Icons";
-import ghImage from '../../images/gh-picture.png';
 import {Link} from "react-router-dom";
 
 export default function Homepage() {
@@ -113,7 +111,7 @@ export default function Homepage() {
                   <li>
                     <Link
                       target="__blank"
-                      to={`/resume.pdf`}
+                      to={`${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/resume.pdf`}
                     >
                       Go to Resume
                     </Link>
@@ -160,7 +158,7 @@ export default function Homepage() {
                     <div
                       className="image"
                       style={{
-                        backgroundImage: `url("${ghImage}")`,
+                        backgroundImage: `url("${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/images/gh-picture.png")`,
                         opacity,
                       }}
                     ></div>
@@ -381,7 +379,7 @@ export default function Homepage() {
             >
               <h1 className="title">Get in touch</h1>
               <p className="description">Let's connect.</p>
-              <Link to={`/contact`}>
+              <Link to={`${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/contact`}>
                 <Button type="blue">Contact Me</Button>
               </Link>
             </div>

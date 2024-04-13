@@ -7,6 +7,7 @@ import {
     mdiMagnify
 } from '@mdi/js';
 import { useAppContext } from '../Context/app-context';
+import { PUBLIC_URL } from "@env";
 const Link = require("react-router-dom").Link;
 
 export default function ProjectModal() {
@@ -21,7 +22,7 @@ export default function ProjectModal() {
                 <span className="close" onClick={() => setModal({ type: '' })}>&times;</span>
             </div>
             <div className="modal-body flex">
-                <div className="image" style={{ backgroundImage: `url("${process.env.PUBLIC_URL}/images/${project.img}")` }}></div>
+                <div className="image" style={{ backgroundImage: `url("${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/images/${project.img}")` }}></div>
                 <div className="content relative">
                     <h1 className="type">
                         {project.type}

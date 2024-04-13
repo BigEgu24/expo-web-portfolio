@@ -38,7 +38,7 @@ function Routes({ location }) {
       />
       <Route
         exact
-        path={"/contact"}
+        path={`${PUBLIC_URL==="/" ? "" : PUBLIC_URL}/contact`}
         render={(e) => {
           return <Contact />;
         }}
